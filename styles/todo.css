@@ -1,0 +1,36 @@
+.todo_btn.edit > img {
+    position: absolute;
+}
+
+
+.todo.open {
+    background-color: rgba(255, 255, 255, 0.04);
+    padding-bottom: 20px;
+
+}
+
+.todo.open > .todo_Front > .todo_desc.preview {
+    display: none;
+    opacity: 0%;
+    color: red;
+}
+.todo.open > .todo_Front > .line_todoTitle {
+    transition: 300ms;
+    width: 100%;
+    margin-right: 0px;
+}
+
+
+.todo.open > .todo_Back {
+    opacity: 100%;
+    margin-top: -10px;
+    height: 100%;
+}
+
+
+
+
+
+
+
+

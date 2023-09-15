@@ -1,0 +1,202 @@
+
+* {
+    transition: 300ms;
+}
+
+
+
+
+
+.todo_btn.subEdit {
+    
+    display: flex;
+    height: 100%;
+    flex-grow: 2;
+    
+    background-color: #434343; 
+    color: #93FF51;
+    font-weight: 700;
+    margin-right: 5px;
+    
+}
+
+.todo_btn.subEdit:hover {
+    background-color: #94ff511f;
+}
+
+.todo_btn.canEdit:hover {
+    background-color: rgba(255, 155, 155, 0.2);
+    color: rgb(255, 149, 149);
+}
+
+
+.todo_btn.canEdit {
+    display: flex;
+    color: rgba(255, 255, 255, 0.696);
+    background-color: #434343; 
+
+    flex-grow: 1;
+    height: 100%;
+}
+
+
+
+.todo.editing  {
+    padding: 10px;
+    cursor: auto;
+    background-color: #373737;
+}
+
+.todo.editing > .todo_Back >.todo_buttons_wrap {
+    column-gap: 0px;
+}
+.todo.editing > .todo_Back >.todo_buttons_wrap >.todo_btn {
+    flex-grow: 0;
+    width: 0%;
+    overflow: hidden;
+
+    margin: 0px;
+    padding: 0px;
+    opacity: 0%;
+}
+.todo.editing > .todo_Back >.todo_buttons_wrap >.todo_btn.edit  { 
+    display: flex;
+    flex-grow: 1;
+    opacity: 100%;
+}
+
+.todo.editing > .todo_Back >.todo_buttons_wrap >.todo_btn.edit:hover  { 
+    background-color: rgba(255, 255, 255, 0.00);
+    cursor: auto;
+}
+
+
+
+
+.btns_editWrap {
+
+    transition: 100ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #373737;
+    height: 100%;
+
+    display: none;
+    opacity: 0%;
+    width: 100%;
+
+}
+
+.btns_editWrap:hover {
+    background-color: #37373700; 
+    cursor: auto;
+}
+
+.btns_editWrap.flex {
+    display: flex;
+}
+
+
+
+.todo.editing > .todo_Back >.todo_buttons_wrap >.todo_btn.edit > img { 
+    width: 0%;
+}
+.todo.editing > .todo_Front  { 
+    height: 40px;
+    min-height: 40px;
+    justify-content: space-between;
+    
+    
+}
+.todo.editing > .todo_Front >.line_todoTitle { 
+    width: 0%;
+    margin: 0px;
+}
+
+.todo.editing > .todo_Front >.todo_title { 
+    flex-grow: 1;
+    background-color: #575757;
+    padding-left: 12px;
+
+    cursor: auto;
+}
+
+.todo.editing > .todo_Back >.todo_desc { 
+    background-color: #575757;
+    cursor: auto;
+}
+
+.todo.editing > .todo_Back { 
+    margin-top:5px;
+}
+
+.todo.editing > .todo_Back > .todo_desc.content {
+
+
+    overflow-y: scroll;
+    padding-top: 7px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+.todo.editing > .todo_Back > .todo_desc.content::-webkit-scrollbar {
+    width: 5px;
+    
+
+}
+.todo.editing > .todo_Back > .todo_desc.content::-webkit-scrollbar-track {
+    background: none;
+    
+}
+
+.todo.editing > .todo_Back > .todo_desc.content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 100px;
+    
+  }
+
+
+.todo_desc.content {
+    margin-bottom: 0px;
+
+    padding-top:0px;
+    transition: 300ms !important;
+}
+
+.temp {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    background-color: #57575700;
+    border-radius: 4px;
+}
+
+.todo.editing > .todo_Back >.temp {
+    margin-bottom: 10px;
+    background-color: #575757;
+
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    
+}
+
+
+
+
+
+
+
+
+ 
+
+  
+  /* Track */
+
+  
+  /* Handle */
+  
+  
+  /* Handle on hover */
+ 
+

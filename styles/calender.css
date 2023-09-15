@@ -1,0 +1,264 @@
+
+:root {
+    --color_low: rgb(199, 199, 199);
+    --color_medium: rgb(255, 249, 140);
+    --color_high: rgb(255, 152, 152);
+    
+
+    --BG_low: rgb(99, 99, 99);
+    --BG_medium: #e5e3ae4c;
+    --BG_high: #ff87874f;
+
+    --coolor_upcoming_day: rgb(74, 74, 77);
+    --coolor_weekend_day: rgba(255, 255, 255, 0.03);
+    
+}
+
+*{
+    transition: 150ms;
+}
+
+
+.calender {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+
+    row-gap: 2.5px;
+    column-gap: 2.5px;
+    height: 100%;
+}
+
+.calender_UpperWrap {
+    height: 75px;
+    display: flex;
+
+    align-items: flex-end;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.187);
+
+    margin-bottom: 15px;
+}
+
+/* ----------------------------------- */
+.day {
+    width: 100%;
+    height: 100%;
+    background-color: var(--coolor_upcoming_day);
+
+    max-width: 100%;;
+    max-height: 100%;
+
+    align-content: flex-start;
+    border-top: 0px solid #58585800;
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+
+
+    color: black;
+    position: relative;
+    padding: 8px;
+
+    
+}
+
+.day:hover {
+    background-color: rgb(108, 108, 108);
+}
+
+.calNumber {
+    color: rgba(255, 255, 255, 0.41);
+    border-radius: 100px;
+
+    height: 25px;
+    width: 25px;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.calNumber.current {
+    background-color: #f67c00;
+    color: white;
+    font-weight: 600;
+}
+
+.day.today {
+    border-top: 6px solid #f67c00;
+    background-color: rgba(255, 255, 255, 0.10);
+
+}
+
+.day.today > .calNumber{
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);  
+}
+
+.day.selected {
+    border-top: 6px solid var(--color_medium);
+    background-color: rgb(83, 83, 83);    
+}
+
+.day.selected > .calNumber{
+    color: white; 
+    font-weight: 700;  
+}
+
+.day.selected:hover {
+    background-color: rgb(83, 83, 83); 
+}
+
+
+
+
+
+.mark_activeTodo {
+    width: 10px;
+    height: 10px;
+    /* background-color: rgb(145, 145, 255); */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.mark_activeTodo.low {
+    background-color: var(--color_low)
+}
+
+.mark_activeTodo.medium {
+    background-color: var(--color_medium)
+}
+
+.mark_activeTodo.high {
+    background-color: var(--color_high)
+}
+
+.day_passed {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.day_passed:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* ----------------------------------- */
+
+.btn_changeMonth {
+    background-color: rgb(95, 95, 95);
+    width: 60px;
+    height: 35px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn_changeMonth:hover {
+    background-color: rgb(135, 135, 135);
+}
+
+.btn_changeMonth.prev {
+    margin-left: auto;
+    
+}
+
+.btn_changeMonth.current {
+    margin-left:5px;
+    margin-right: 5px;
+    height: 35px;
+
+    width: 80px;
+    font-weight: 600;
+    
+}
+
+.btn_changeMonth.prev > img {
+    height: 80%;
+    opacity: 85%;
+    transform: rotate(-90deg);
+}
+
+.btn_changeMonth.next > img {
+    height: 80%;
+    opacity: 85%;
+    transform: rotate(90deg);
+}
+
+/* ----------------------------------- */
+
+.weekDays_wrap {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 35px;
+    grid-auto-rows: 35px;
+    
+    column-gap: 2px;
+    margin-bottom: 6px;
+}
+
+.weekDay {
+    background-color: var(--coolor_upcoming_day);
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.1px;
+
+    
+}
+
+.weekDay.sat, .weekDay.sun, .weekendDay {
+    background-color: var(--coolor_weekend_day);
+}
+
+.dayBox_todoTitle {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+}
+
+.dayBox_todoTitle.low {
+    color: var(--color_low);
+}
+
+.dayBox_todoTitle.medium {
+    color: var(--color_medium);
+}
+
+.dayBox_todoTitle.high {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color_high);
+}
+
+
+.day.weekendDay.day_passed {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.day.weekendDay.day_passed:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}

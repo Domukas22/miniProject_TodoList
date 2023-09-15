@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/rightSide.css">
+    <link rel="stylesheet" href="../styles/calender.css">
+    <link rel="stylesheet" href="../styles/todo.css">    
+    <link rel="stylesheet" href="../styles/priorities.css"> 
+    <link rel="stylesheet" href="../styles/edit.css">   
+</head>
+<body>
+    
+    <div class="allWrap">
+        <main >
+            <div class="calender_UpperWrap">
+                <h1 class="mainTitle" id="calDate"></h1>
+                <div class="btn_changeMonth prev" id="prev"><img src="./img/SVG/Arrow.svg"></div>
+                <div class="btn_changeMonth current" id="now">Today</div>
+                <div class="btn_changeMonth next" id="next"><img src="./img/SVG/Arrow.svg"></div>
+            </div>
+            <div class="weekDays_wrap">
+                <div class="weekDay">MON</div>
+                <div class="weekDay">TUE</div>
+                <div class="weekDay">WED</div>
+                <div class="weekDay">THU</div>
+                <div class="weekDay">FRI</div>
+                <div class="weekDay sat">SAT</div>
+                <div class="weekDay sun">SUN</div>
+            </div>
+            <div class="calender"></div>
+            
+        </main>
+        <div class="right_Side">
+            <div class="right_Top">
+                <h1 id="title_Right">Title</h1>
+                
+            </div>
+            <div class="todo_wrap_right"></div>
+            <div class="todo template" id="todo_template_right">
+                <div class="wrap_allTemplateInputs">
+                    <div class="wrap_textInputsTemplate">
+                        <input type="text" class="input_todo title" id="input_todo_title_right" placeholder="Title...">
+                        <textarea class="input_todo desc" cols="30" rows="10" placeholder="Description..."></textarea>
+                    </div>
+                    <div class="todo_priorityWrap">
+                        <input type="radio" name="priority" class="input_priority high" data-priority="high">
+                        <input type="radio" name="priority" class="input_priority medium" data-priority="medium">
+                        <input type="radio" name="priority" class="input_priority low" data-priority="low" checked>
+                    </div>
+                </div>
+                <div class="horSeparator"></div>
+                <div class="todo_buttons_wrap submit">
+                    <div class="input_submitBtn done" id="btn_submitTodo">Add</div>
+                    <div class="input_submitBtn cancel" id="btn_cancelTodo">Cancel</div>
+                </div>
+            </div>
+            <div class="add_todo_btn" id="add_todo_btn_right">
+                <p>+ Add new...</p>
+            </div>
+        </div>
+        
+        
+
+        
+    </div>
+
+    <script src="./main.js"></script>
+
+
+    
+</body>
+</html>
